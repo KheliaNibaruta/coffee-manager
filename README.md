@@ -1,10 +1,10 @@
 # CoffeeManager
 
-Vente de café en ligne
+E-Commerce and CMS coffee online management
 
 # Technologies
 
-Spring boot
+Next.js / React / TypeScript
 
 # Auteur
 
