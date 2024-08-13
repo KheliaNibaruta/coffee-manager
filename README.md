@@ -3,8 +3,7 @@
 E-Commerce and CMS coffee online management
 
 # Technologies
-
-Next.js / React / TypeScript
+MERN stack
 
 # Auteur
 
