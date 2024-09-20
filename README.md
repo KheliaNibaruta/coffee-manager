@@ -1,6 +1,6 @@
 # CoffeeManager
 
-E-Commerce and CMS coffee online management
+Marketplace and coffee online management
 
 # Technologies
 MERN stack
