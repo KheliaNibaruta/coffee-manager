@@ -1,0 +1,50 @@
+const express = require("express");
+const path = require("path");
+const User = require("../models/user");
+const router = express.Router();
+const upload = require("../multer");
+const ErrorHandler = require("../utils/ErrorHandler");
+const fs = require("fs");
+
+router.post("/create-user", upload.single("file"), async (req, res, next) => {
+
+    const {name, email, password} = req.body;
+    const userEmail = await User.findOne({email});
+
+    if (userEmail) {
+        const filename = req.file.filename;
+        const filePath = `uploads/${filename}`;
+        fs.unlink(filePath, (err) => {
+            if (err) {
+                console.log(err);
+                res.status(500).json({ message: "Error deleting file" });
+            } else {
+                req.json({ message: "File deleted successfully" });
+            }
+        });
+
+        return next(new ErrorHandler("User already exists", 400));
+    }
+
+    const filename = req.file.filename;
+    const fileUrl = path.join(filename);
+
+    const user = {
+        name: name,
+        email: email,
+        password: password,
+         avatar: {
+            public_id: filename, // Utilisez le nom de fichier comme identifiant public
+            url: fileUrl // Chemin vers l'avatar
+        }
+    };
+
+    const newUser = await User.create(user);
+    res.status(201).json({
+        success: true,
+        newUser,
+    });
+
+});
+
+module.exports = router;
