@@ -289,7 +289,7 @@ export const productData = [
     price: 1099,
     discount_price: 1049,
     rating: 4,
-    total_sell: 35,
+    total_left: 35,
     stock: 10,
   },
   {
@@ -318,7 +318,7 @@ export const productData = [
     },
     discount_price: 1099,
     rating: 5,
-    total_sell: 80,
+    total_left: 80,
     stock: 10,
     category:"Mobile & Tablets"
   },
@@ -349,7 +349,7 @@ export const productData = [
     price: 1099,
     discount_price: 1049,
     rating: 4,
-    total_sell: 75,
+    total_left: 75,
     stock: 10,
     category:"Computers & Laptop"
   },
@@ -381,7 +381,7 @@ export const productData = [
     price: 100,
     discount_price: 79,
     rating: 4,
-    total_sell: 12,
+    total_left: 12,
     stock: 10,
   },
   {
@@ -411,7 +411,7 @@ export const productData = [
     price: 120,
     discount_price: 89,
     rating: 5,
-    total_sell: 49,
+    total_left: 49,
     stock: 10,
     category:"Shoes"
   },
@@ -450,7 +450,7 @@ export const productData = [
         rating: 5,
       },
     ],
-    total_sell: 20,
+    total_left: 20,
     stock: 10,
     category:"Music and Gaming"
   },
@@ -480,7 +480,7 @@ export const productData = [
     price: 100,
     discount_price: 79,
     rating: 4,
-    total_sell: 62,
+    total_left: 62,
     stock: 10,
   },
   {
@@ -518,7 +518,7 @@ export const productData = [
         rating: 5,
       },
     ],
-    total_sell: 20,
+    total_left: 20,
     stock: 10,
   },
   {
@@ -547,7 +547,7 @@ export const productData = [
     },
     discount_price: 1099,
     rating: 5,
-    total_sell: 20,
+    total_left: 20,
     stock: 10,
   },
   {
@@ -586,7 +586,7 @@ export const productData = [
         rating: 5,
       },
     ],
-    total_sell: 20,
+    total_left: 20,
     stock: 10,
   },
 ];
