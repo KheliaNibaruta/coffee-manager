@@ -1,17 +1,21 @@
-import Header from '../components/Layouts/Header'
-import Hero from "../components/Route/Hero/Hero"
-import Categories from "../components/Route/Categories"
-import BestDeals from "../components/Route/BestDeals"
+import Header from "../components/Layouts/Header";
+import Hero from "../components/Route/Hero/Hero";
+import Categories from "../components/Route/Categories/Categories";
+import BestDeals from "../components/Route/BestDeals/BestDeals";
+import FeaturedProduct from "../components/Route/FeaturedProduct/FeaturedProduct";
+import Events from "../components/Events/Events";
 
 const HomePage = () => {
   return (
     <div>
-        <Header activeHeading={1} />
-        <Hero />
-        <Categories />
-        <BestDeals />
+      <Header activeHeading={1} />
+      <Hero />
+      <Categories />
+      <BestDeals />
+      <Events />
+      <FeaturedProduct />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
