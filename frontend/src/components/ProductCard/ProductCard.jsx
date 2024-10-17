@@ -9,6 +9,7 @@ import {
 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import styles from "../../styles/styles";
+import ProductDetailsCard from "../ProductDetailsCard/ProductDetailsCard";
 
 const ProductCard = ({ data }) => {
   const [click, setClick] = useState(false);
@@ -113,16 +114,10 @@ const ProductCard = ({ data }) => {
             onClick={() => setOpen(!open)}
             color="#444"
             title="Add to cart"
-            />
-            {
-                open ? (
-                    <ProductDetailsCard
-                        open={open}
-                        setOpen={setOpen}
-                        data={data}
-                    />
-                ) : null
-            }
+          />
+          {open ? (
+            <ProductDetailsCard open={open} setOpen={setOpen} data={data} />
+          ) : null}
         </div>
       </div>
     </>
